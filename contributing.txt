@@ -1,0 +1,60 @@
+# Contributing to Lexgen
+
+Thanks for your interest in improving Lexgen!
+Lexgen is an open, YAML-powered CLI framework for deploying vertical AI agents. You can contribute:
+- New agent templates (e.g. healthcare, finance)
+- CLI features (e.g. `--dryrun`, `--trace`)
+- Docs or examples
+
+---
+
+## ✨ Contributing an Agent Template
+
+1. Fork the repo
+2. Create your agent file:
+```bash
+lexgen template --init your-agent-name
+```
+3. Fill out the YAML with fields like:
+```yaml
+agent: policy-analyzer
+vertical: insurance
+task: summarize claim language
+billing_unit: policy
+format: pdf
+```
+4. Test it:
+```bash
+lexgen run --template policy-analyzer.yaml
+```
+5. Submit a PR with:
+- Your YAML file in `/templates/`
+- Example output in `/outputs/` (optional)
+- Explanation in PR description
+
+---
+
+## 🧩 CLI Development
+Want to improve or extend the CLI?
+- Commands live in `lexgen/cli.py`
+- Core router: `__main__.py`
+- Logs live in `/logs/`, registry in `agent-registry.json`
+
+Run local CLI:
+```bash
+pip install -e .
+lexgen --help
+```
+
+---
+
+## 🧠 Docs & Community
+- [YAML Field Spec](docs/agent-spec.md)
+- [Feedback Page](docs/feedback.md)
+- [Create an Issue](https://github.com/lexvion/lexgen/issues)
+
+We welcome agent proposals, bug reports, and new verticals.
+
+📩 Email: [alex@lexvionsol.com](mailto:alex@lexvionsol.com)
+
+Thanks for helping Lexgen grow!
