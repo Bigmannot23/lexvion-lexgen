@@ -1,49 +1,62 @@
-Lexgen CLI – Vertical AI Agent Engine
 
-Lexgen is a CLI-first agent operating system.
+# Lexgen CLI – Vertical AI Agent Engine
+
+[![PyPI](https://img.shields.io/pypi/v/lexgen?color=brightgreen&label=install%20lexgen)](https://pypi.org/project/lexgen/)  
+![Release](https://img.shields.io/badge/release-v0.1.0-blue?style=flat-square)
+
+Lexgen is a CLI-first agent operating system.  
 It deploys, logs, and monetizes vertical AI agents from YAML.
 
-⸻
+---
 
-🚀 Features
-	•	Run agents via CLI: lexgen run --template agent.yaml
-	•	Create new templates: lexgen template --init agent-name
-	•	Track execution: push run logs to Airtable, alert on error/SLA
-	•	Built-in agent registry + output folder system
+## 🚀 Features
 
-⸻
+- Run agents via CLI: `lexgen --template agent.yaml`
+- Create new YAML templates
+- Log to Airtable and alert on SLA errors
+- CLI-native, vertical-ready
 
-📦 Install
+---
 
+## 📦 Install
+
+**TestPyPI**
+```bash
 pip install -i https://test.pypi.org/simple lexgen
+```
 
+**Production PyPI** (once uploaded live)
+```bash
+pip install lexgen
+```
 
-⸻
+---
 
-📄 YAML Agent Example
+## 🧪 Demo
 
+Run the included agent:
+```bash
+lexgen --template brief-agent.yaml
+```
+
+Output will appear in `/outputs/` or CLI log.
+
+---
+
+## 📄 YAML Agent Template
+
+```yaml
 agent: brief-agent
 vertical: legal
 task: summarize + format legal brief
 format: docx
 billing_unit: brief
+```
 
+---
 
-⸻
+## 📚 Docs  
+https://lexvion.github.io/lexgen
 
-📚 Docs
-
-🔗 https://lexvion.github.io/lexgen
-
-⸻
-
-👥 Contributing
-
-Want to add a new agent? See CONTRIBUTING.md
-
-⸻
-
-📬 Contact
-
+## 📬 Contact  
 alex@lexvionsol.com
-www.lexvionsol.com/demo
