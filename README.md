@@ -29,7 +29,12 @@ pip install -i https://test.pypi.org/simple lexgen
 ```bash
 pip install lexgen
 ```
+## 🧪 Quick Demo
 
+Run the built-in agent:
+
+```bash
+bash demo.sh
 ---
 
 ## 🧪 Demo
