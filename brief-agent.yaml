@@ -1,0 +1,5 @@
+agent: brief-agent
+vertical: legal
+task: summarize + format legal brief
+format: docx
+billing_unit: brief

@@ -1,0 +1,5 @@
+agent: appeal-agent
+vertical: dental
+task: generate appeal from denial notice
+format: pdf
+billing_unit: document
