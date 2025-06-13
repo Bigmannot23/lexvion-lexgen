@@ -1,60 +1,55 @@
-# Contributing to Lexgen
+# Lexgen CLI – Vertical AI Agent Engine
 
-Thanks for your interest in improving Lexgen!
-Lexgen is an open, YAML-powered CLI framework for deploying vertical AI agents. You can contribute:
-- New agent templates (e.g. healthcare, finance)
-- CLI features (e.g. `--dryrun`, `--trace`)
-- Docs or examples
+[![PyPI](https://img.shields.io/pypi/v/lexgen?color=brightgreen&label=install%20lexgen)](https://pypi.org/project/lexgen/)  
+![Release](https://img.shields.io/badge/release-v0.1.0-blue?style=flat-square)
+
+Lexgen is a CLI-first agent operating system.\
+It deploys, logs, and monetizes vertical AI agents from YAML.
 
 ---
 
-## ✨ Contributing an Agent Template
+## 🚀 Features
 
-1. Fork the repo
-2. Create your agent file:
+- Run agents via CLI: `lexgen run --template agent.yaml`
+- Create new templates: `lexgen template --init agent-name`
+- Track execution: push run logs to Airtable, alert on error/SLA
+- Built-in agent registry + output folder system
+
+---
+
+## 📦 Install
+
 ```bash
-lexgen template --init your-agent-name
+pip install -i https://test.pypi.org/simple lexgen
 ```
-3. Fill out the YAML with fields like:
+
+---
+
+## 📄 YAML Agent Example
+
 ```yaml
-agent: policy-analyzer
-vertical: insurance
-task: summarize claim language
-billing_unit: policy
-format: pdf
-```
-4. Test it:
-```bash
-lexgen run --template policy-analyzer.yaml
-```
-5. Submit a PR with:
-- Your YAML file in `/templates/`
-- Example output in `/outputs/` (optional)
-- Explanation in PR description
-
----
-
-## 🧩 CLI Development
-Want to improve or extend the CLI?
-- Commands live in `lexgen/cli.py`
-- Core router: `__main__.py`
-- Logs live in `/logs/`, registry in `agent-registry.json`
-
-Run local CLI:
-```bash
-pip install -e .
-lexgen --help
+agent: brief-agent
+vertical: legal
+task: summarize + format legal brief
+format: docx
+billing_unit: brief
 ```
 
 ---
 
-## 🧠 Docs & Community
-- [YAML Field Spec](docs/agent-spec.md)
-- [Feedback Page](docs/feedback.md)
-- [Create an Issue](https://github.com/lexvion/lexgen/issues)
+## 📚 Docs
 
-We welcome agent proposals, bug reports, and new verticals.
+🔗 [https://lexvion.github.io/lexgen](https://lexvion.github.io/lexgen)
 
-📩 Email: [alex@lexvionsol.com](mailto:alex@lexvionsol.com)
+---
 
-Thanks for helping Lexgen grow!
+## 👥 Contributing
+
+Want to add a new agent? See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+---
+
+## 📬 Contact
+
+[alex@lexvionsol.com](mailto:alex@lexvionsol.com)\
+[www.lexvionsol.com/demo](http://www.lexvionsol.com/demo)
